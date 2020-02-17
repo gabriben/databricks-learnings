@@ -1,6 +1,6 @@
 # Databricks
 
-- live notebook clusters :: block bz block code execution
+- live notebook clusters :: block by block code execution
 - standard clusters :: job execution
 
 ## install a package on a live notebook cluster from the pypi repository
@@ -14,7 +14,7 @@ Once one is done testing, it is easier to move to a standard cluster, so as to s
 
 ## install a package on a standard cluster from the pypi repository
 
-create a job -> associate a clsuter to it -> add a dependent  library, that was imported with the steps above.
+create a job -> associate a clsuter to it -> add a dependent library that was imported with the steps above.
 
 ## hyperparameter tuning
 
@@ -22,9 +22,9 @@ https://docs.databricks.com/notebooks/widgets.html
 
 ## download files from folder
 
-go to user settings under the little man top right. setup a new token
+1. go to user settings under the little man top right. setup a new token
 
-in terminal:
+2. in terminal:
 
 ```
 pip install databricks-cli
@@ -32,15 +32,17 @@ databricks configure --token
 westeurope.azuredatabricks.net/?o=5728379491119130
 ```
 
-copy paste the token
+3. copy paste the token
 
-for help:
+---
+
+- for help:
 
 ```
 databricks fs -h
 ```
 
-to download a file:
+- to download a file:
 
 ```
 databricks fs cp dbfs:/FileStore/... local/file/directory
