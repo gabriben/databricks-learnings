@@ -9,8 +9,10 @@ go to main page -> import library -> pypi -> "package_name"
 
 whenever you restart the cluster that is attached to the notebook, you have to "detach reattach" to the cluster on the upper left corner.
 
-%, you have to reinstall farm:
-% uninstall (go to workspace -> "farm" -> uninstall) -> restart cluster -> install (go to workspace -> "farm" -> install)
+ <!--- 
+, you have to reinstall farm:
+ uninstall (go to workspace -> "farm" -> uninstall) -> restart cluster -> install (go to workspace -> "farm" -> install)
+just --->
 
 Once one is done testing, it is easier to move to a standard cluster, so as to start scheduling and always have the packages installed.
 
