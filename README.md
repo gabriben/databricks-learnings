@@ -59,3 +59,41 @@ import logging
 logger = spark._jvm.org.apache.log4j
 logging.getLogger("py4j").setLevel(logging.ERROR)
 ```
+
+## For R
+
+### Install and Load Packages dynamically
+
+```
+packages <- c("dplyr", "profvis", ...)
+
+package.check <- lapply(packages, FUN = function(x) {
+  if (!require(x, character.only = T)) install.packages(x)
+  if (! (x %in% (.packages() )))  library(x, character.only = T)
+})
+```
+
+
+### install Keras
+
+```
+# making sure that the cluster's default python is used to install keras and run models
+# without this command, keras_model.compile(), install_keras() and install_tensorflow() conflict by using different python installations.
+Sys.setenv(RETICULATE_PYTHON = system("which python", intern = T))
+
+install.packages("tensorflow")
+library(tensorflow)
+install_tensorflow()
+
+# version = "gpu"
+
+install.packages("keras")
+library(keras)
+install_keras(tensorflow = "gpu")
+
+### check
+
+k = backend()
+sess = k$get_session()
+sess$list_devices()
+```
