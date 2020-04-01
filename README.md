@@ -126,3 +126,20 @@ k = backend()
 sess = k$get_session()
 sess$list_devices()
 ```
+
+### workflow example
+
+Databricks does not offer an integration of an entire github repo. Instead, it works on a file by file basis. To manage that, to use your favourite IDE and to separate the script into several text files for readability (e.g. one text file per function / class definition), one solution is the following:
+Have a central R notebook on databricks that calls scripts from other R files in a central ```script```directory. Workflow is then the following:
+1. modify script files locally on favourite IDE
+2. in your shell (to install the CLI, see "download files from folder"): 
+  `databricks fs mkdirs dbfs:/FileStore/video2vec/script`
+  `databricks fs cp -r script dbfs:/FileStore/video2vec/script`
+3. in databricks
+```
+setwd("/dbfs/FileStore/video2vec/script")
+lapply(list.files(pattern = "[.][rR]$", recursive = FALSE), source)
+```
+
+Another option is an R-Package, but that would have required an extra step of de- and re-installing the package at every modification.
+This workflow sounds a bit more tedious than usual, but requires just a few seconds of time and is not that much slower than full repo git integration (until it comes to Databricks). Please do message me in case you found a nicer workflow for R or Python. 
