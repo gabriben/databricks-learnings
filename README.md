@@ -7,6 +7,11 @@
 
 - path to root: `file:/databricks/driver/`
 
+## Jobs
+
+- chose a new job cluster (the all purpose ones are more expensive and can also be notebook clusters).
+- Saving logs: advanced options -> logging -> destination -> DBFS
+
 ## Databricks + AWS
 
 ### permanently mount a bucket (notebook and job clusters are handled differently)
