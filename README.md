@@ -7,7 +7,7 @@
 
 - path to root: `file:/databricks/driver/`
 - use your own IDE (e.g. Jupyterlab): https://databricks.com/blog/2019/12/03/jupyterlab-databricks-integration-bridge-local-and-remote-workflows.html
-- `Ctrl + -`to comment/uncomment on a mac
+- `Ctrl` + `-`to comment/uncomment on a mac
 
 ## Jobs
 
