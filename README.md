@@ -1,7 +1,7 @@
 # Databricks
 
 - live notebook clusters :: block by block code execution
-- standard job clusters :: job execution (~4 times cheaper, I heard)
+- standard job clusters :: job execution (~3-4 times cheaper, I heard)
 
 ## miscellanious
 
