@@ -106,7 +106,7 @@ logging.getLogger("py4j").setLevel(logging.ERROR)
 ### Install and Load Packages dynamically
 
 ```
-packages <- c("dplyr", "profvis", ...)
+packages <- c("data.table", "profvis", ...)
 
 package.check <- lapply(packages, FUN = function(x) {
   if (!require(x, character.only = T)) install.packages(x)
