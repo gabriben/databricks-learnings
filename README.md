@@ -11,7 +11,7 @@
 
 -> **German fix [credits: Franziska]** `Option` + select beginning of lines with mouse + `#`
 
--> (**Swiss fix** `Ctrl` + `-`)
+-> **Swiss fix** `Ctrl` + `-`
 
 ## Jobs
 
