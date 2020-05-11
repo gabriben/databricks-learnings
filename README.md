@@ -66,7 +66,7 @@ databricks fs cp dbfs:/FileStore/... local/file/directory
 
 ## For Python
 
-### import an .py file as a module
+### import a .py file as a module
 
 1. right click in the workspace and click import (creating a .py file from scratch is not possible)
 2. write `%run /Users/firstName.lastName@company.com/path/to/external.py` in a notebook block.
