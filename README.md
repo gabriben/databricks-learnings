@@ -9,9 +9,9 @@
 - use your own IDE (e.g. Jupyterlab): https://databricks.com/blog/2019/12/03/jupyterlab-databricks-integration-bridge-local-and-remote-workflows.html
 - the comment/uncomment shortcut `Cmd` + `/` doesn't work with German / Swiss mac keyboards. 
 
--> **Swiss fix** `Ctrl` + `-`. 
+-> **German fix [credits: Franziska]** `Option` + select beginning of lines with mouse + `#`
 
--> **German fix** ??
+-> (**Swiss fix** `Ctrl` + `-`)
 
 ## Jobs
 
