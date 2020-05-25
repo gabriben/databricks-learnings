@@ -1,6 +1,6 @@
 # Databricks
 
-- live notebook clusters :: block by block code execution
+- all-purpose clusters (notebook/job clusters) :: block by block code execution
 - standard job clusters :: job execution (~3-4 times cheaper)
 
 ## miscellanious
@@ -19,6 +19,8 @@
 
 - chose a new job cluster (the all purpose ones are more expensive and can also be notebook clusters).
 - Saving logs: advanced options -> logging -> destination -> DBFS
+
+**job clusters, unlike all-purpose notebooks, don't have a "stop when idle" option, which means your job may run indefinitely**
 
 ## Databricks + AWS
 
