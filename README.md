@@ -17,8 +17,24 @@
 
 ## Jobs
 
-- chose a new job cluster (the all purpose ones are more expensive and can also be notebook clusters).
-- Saving logs: advanced options -> logging -> destination -> DBFS
+1. chose a new job cluster (the all purpose ones are more expensive and can also be notebook clusters).
+2. Saving logs on that cluster: advanced options -> logging -> destination -> DBFS
+3. give cluster access to AWS/Azure storage: options -> advanced  
+4. If you are using a previously created mlflow experiment linked to the notebook, find the experiment name with this
+
+```
+from  mlflow.tracking import MlflowClient
+client = MlflowClient()
+experiments = client.list_experiments() # returns a list of mlflow.entities.Experiment
+experiments
+```
+
+and then at the beginning of the notebook that runs in the job:
+
+```
+import mlflow
+mlflow.set_experiment("expName")
+```
 
 **job clusters, unlike all-purpose notebooks, don't have a "stop when idle" option, which means your job may run indefinitely**
 
