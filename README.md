@@ -109,6 +109,15 @@ logger = spark._jvm.org.apache.log4j
 logging.getLogger("py4j").setLevel(logging.ERROR)
 ```
 
+### import a csv from the web
+
+```
+import urllib3
+response = urllib3.PoolManager().request('GET', 'http://health.data.ny.gov/api/views/myeu-hzra/rows.csv')
+csvfile = response.data.decode("utf-8")
+dbutils.fs.put("dbfs:/babynames.csv", csvfile)
+```
+
 ## For R
 
 ### Install and Load Packages dynamically
