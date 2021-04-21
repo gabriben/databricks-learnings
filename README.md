@@ -36,6 +36,8 @@ import mlflow
 mlflow.set_experiment("expName")
 ```
 
+**sometimes the job cluster will fail without a good reason (e.g. `ImportError: __import__ not found`). Try to change the cluster's runtime.** 
+
 **job clusters, unlike all-purpose notebooks, don't have a "stop when idle" option, which means your job may run indefinitely**
 
 ## Databricks + AWS
